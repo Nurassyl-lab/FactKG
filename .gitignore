@@ -1,3 +1,6 @@
 # Datasets
 factkg.zip
 factkg/
+
+# Configs
+.env
