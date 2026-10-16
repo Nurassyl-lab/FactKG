@@ -108,3 +108,56 @@ Step 3) train hop predictor
 
 ## License
 CC BY-NC-SA 4.0
+
+## CSV
+### factkg_grounded_paths.csv 
+- claim_id
+   
+   Type: `string`
+
+   A deterministic unique identifier for a claim, generated as a hash of the claim text.
+
+   Used to group multiple reasoning paths belonging to the same claim
+
+   Stable across dataset reloads
+
+- claim_text
+
+   Type: `string`
+
+   The original natural-language claim from the FACTKG dataset.
+
+   Example:
+   `"A soccer player has played for the Essendon Royals SC youth team..."`
+
+- label
+
+   Type: `int`
+
+   Ground-truth factuality label of the claim with respect to the knowledge graph.
+   
+   `0` - Refuted, The knowledge graph contains evidence that contradicts the claim.
+
+   `1` - Supported, otherwise
+   
+- reasoning_types
+   
+   Type: `string` (pipe-separated list)
+
+   High-level reasoning categories assigned to the claim by FACTKG.
+
+   Examples include:
+   - multi hop
+
+   - substitution
+
+   - num3
+
+   - written
+
+   Multiple types may apply to the same claim.`
+
+   Example:
+   `written|num3|substitution|multi hop`
+
+   
