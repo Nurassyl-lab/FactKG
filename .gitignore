@@ -1,6 +1,7 @@
 # Datasets
 factkg.zip
 factkg/
+factkg_grounded_paths.csv
 
 # Configs
 .env
