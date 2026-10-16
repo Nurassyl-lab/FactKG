@@ -62,6 +62,11 @@ By correcting some errors in the dataset, the baseline performance may differ fr
 
 Environment: ```pip install -r requirements.txt```
 
+Run and replace the ```YOUR_KEY_HERE``` in the .env file with your OpenAI API key. You can copy the .env.example file to .env and edit it.
+```bash
+cp .env.example .env
+```
+
 ### Claim Only
 ```cd claim_only```
 1. BERT: ```python bert_classification.py --model_name bert-base-uncased --exp_name bert_log --train_data_path /path/to/factkg_train.pickle --valid_data_path /path/to/factkg_test.pickle --scheduler linear --batch_size 64 --eval_batch_size 64 --total_epoch 3```
